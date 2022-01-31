@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<!-- Page Settings -->
+		<meta charset="UTF-8">
+		<title>MGP | Login</title>
+
+		<!-- External Resources -->
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="style.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	<body>
+		<div class="formContainer">
+			<h2 id="formHeader">Accedi</h2>
+			<p id="formParagraph">Inserisci le tue credenziali</p>
+			<form id="form">
+				<div class="inputBox" id="usernameBox">
+					<input id="usernameInput" type="text" name="username" required onkeyup="this.setAttribute('value', this.value);" value="">
+					<label id="usernameLabel">Nome Utente</label>
+				</div>
+				<div class="inputBox" id="passwordBox">
+					<input id="passwordInput" type="password" name="password" required onkeyup="this.setAttribute('value', this.value);" value="">
+					<label id="passwordLabel">Password</label>
+				</div>
+				<div class="submitContainer" id="submitContainer">
+					<label class="link" id="switchLabel" onclick="switchTo('SignUp')">Non hai un account?</label>
+					<input id="submitInput" type="button" name="sign-in" value="Accedi" onclick="SignIn_SendData(document.getElementById('usernameInput').value, document.getElementById('passwordInput').value);">
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
